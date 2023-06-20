@@ -4,5 +4,5 @@ Utilizatorul  introduce datele sale in formularul de log in  , daca numele si pa
 
 In sectiunea de Navbar vom avea butoanele Home ,My Runs si  Profile
 
-
+da
 Cand utilizatorul apasa butonul "My runs" din navbar acesta va returna o pagina cu toate sesiunile lui de alergat pe acest cont, tot in pagina "My runs" are optiunea de a selecta o data anume ca filtru pentru ultima sesiune sau un timp/distanta anume.
