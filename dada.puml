@@ -1,0 +1,26 @@
+@startuml
+
+actor Navbar
+actor Utilizator
+left to right direction
+Utilizator-->  (Homepage care contine leaderboard , Navbar si Formular log in / sign up) :acceseaza link site
+  Utilizator --> (Are cont pe wesite)
+ Utilizator --> (introduce datele in formularul de log in si sunt corecte)
+ (introduce datele in formularul de log in si sunt corecte)  --> (Features precum locul sau in leaderboard si ultima sesiune de sport a sa sunt deblocate de catre formular) :Click pe log in
+Utilizator --> (introduce datele gresite in formularul de log in)
+ (introduce datele gresite in formularul de log in)--> ( Formularul returneaza mesajul "username or password incorrect, please try again") : Click pe log in
+
+Utilizator --> Navbar
+
+rectangle Componente_Navbar {
+  usecase "Home" as UC1
+  usecase "My runs" as UC2
+  usecase "Profile" as UC3
+}
+Navbar --> UC1
+Navbar --> UC2
+Navbar --> UC3
+
+UC2 -->( afiseaza o pagina cu toate sesiunile utilizatorului de sport pe contul logat) : On click
+ ( afiseaza o pagina cu toate sesiunile utilizatorului de sport pe contul logat) -> (optiunea de a filtra datele in legatura cu sesiunile de sport)
+@enduml
