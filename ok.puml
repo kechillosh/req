@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Sectiune{
+}
+class navbar{
+}
+class button{
+}
+class myRuns{
+}
+class Profile{
+}
+
+navbar -> myRuns
+
+
+@enduml
