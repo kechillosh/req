@@ -1,8 +1,0 @@
-in momentul accesarii linkului catre  website, utilizatorul va fi adus pe homepage pe care este afisat leaderboardul cu top  utilizatori in momentul actual, navigation bar si un formular  de log in/sign up.
-
-Utilizatorul  introduce datele sale in formularul de log in  , daca numele si parola sunt corecte  si butonul de log in este apasat ,utilizatorului se va loga in cont si ii vor fi deblocate mai multe features precum locul sau in leaderboard si ultima sesiune de sport a sa . Daca datele nu sunt corecte utilizatorului ii va aparea un mesaj cu rosu "username or password incorrect, please try again". 
-
-In sectiunea de Navbar vom avea butoanele Home ,My Runs si  Profile
-
-
-Cand utilizatorul acceseaza butonul "My runs" din navbar acesta va returna o pagina cu toate sesiunile lui de alergat pe acest cont, tot in pagina "My runs" are optiunea de a selecta o data anume ca filtru pentru ultima sesiune sau un timp/distanta anume.
