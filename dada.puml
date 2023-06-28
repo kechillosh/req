@@ -2,24 +2,36 @@
 
 'actor Navbar'
 actor Utilizator
-left to right direction
-Utilizator-->  (este afisat un Homepage care contine leaderboard , Navbar si Formular log in / sign up) :acceseaza link site
 
- Utilizator --> (introduce datele in formularul de log in si sunt corecte)
- (introduce datele in formularul de log in si sunt corecte)  --> (Features precum locul sau in leaderboard si ultima sesiune de sport a sa sunt deblocate de catre formular) :Click pe log in
-Utilizator --> (introduce datele gresite in formularul de log in)
- (introduce datele gresite in formularul de log in)--> ( Formularul returneaza mesajul "username or password incorrect, please try again") : Click pe log in
+Utilizator-->  (se afiseaza un Homepage care contine leaderboard , Navbar si Formular log in / sign up) :acceseaza link site
 
-Utilizator --> ( Selecteaza Navbar)
-rectangle Componente_Navbar {
-  usecase "Home" as UC1
-  usecase "My runs" as UC2
-  usecase "Profile" as UC3
-}
-( Selecteaza Navbar) --> UC1
-( Selecteaza Navbar) --> UC2
-( Selecteaza Navbar) --> UC3
+ Utilizator --> (introduce datele sale in campul de “username” si campul “password” )
+ Utilizator  --> (Datele introduse sunt verificate automat intr-un database) :Click pe log in
+ (Datele introduse sunt verificate automat intr-un database) --> (Verificarea datelor Permite accesul)
+  (Datele introduse sunt verificate automat intr-un database) --> (Verificarea a esuat si nu permite accesul)
+(Verificarea datelor Permite accesul) --> (Sunt deblocate features precum locul sau in leaderboard ,ultima sesiune de sport a utilizatorului "View last session" \n, si optiunea de a incepe o sesiune noua de alergat "start new session")
+ (Verificarea a esuat si nu permite accesul) --> ( Pagina returneaza mesajul "username or password incorrect, please try again")
 
-UC2 -->( afiseaza o pagina cu toate sesiunile utilizatorului de sport pe contul logat) : On click
- ( afiseaza o pagina cu toate sesiunile utilizatorului de sport pe contul logat) -> (optiunea de a filtra datele in legatura cu sesiunile de sport)
+Utilizator --> (Acceseaza butonul “View last run” )
+(Acceseaza butonul “View last run” ) --> (se va  afisa un pop-up cu statisticile despre ultima lui sesiune de alergat.)
+Utilizator --> (utilizatorul acceseaza butonul “start new session”)
+(utilizatorul acceseaza butonul “start new session”) --> (aplicatia cere accordul utilizatorului de a accesa locatia utilizatorului pentru a calcula distanta alergata\n printr-un pop-up cu messajul “Allow acces to location” si butoanele “Allow” si “Deny”.)
+Utilizator --> (alege butonul "Allow" din pop-up )
+(alege butonul "Allow" din pop-up ) --> (sesiunea acestuia de alergat incepe si se afiseaza o fereastra  pe pagina cu \n locatia actuala pe o harta, cronometru ,distanta parcursa si butonul “end session”.)
+Utilizator --> ( Acceseaza butonul “end session” )
+( Acceseaza butonul “end session” ) --> (se vor afisa statisticile finale despre sesiune si avansul pe care acesta la facut in rank.)
+
+Utilizator --> (utilizatorul alege butonul “Deny” )
+(utilizatorul alege butonul “Deny” ) --> (se va da refresh la pagina si nu va incepe sesiunea de alergat.)
+  usecase "Acceseaza buttonul "Home" din navbar si este intors pe Homepage" as UC1
+  usecase "Acceseaza buttonul "My runs" din navbar" as UC2
+
+
+
+Utilizator -> UC2
+UC2 -->(Se  afiseaza o pagina cu toate sesiunile utilizatorului de sport de pe contul logat \n care are optiunea de a filtra datele in legatura cu sesiunile de sport)
+
+Utilizator --> UC1
+Utilizator --> (utilizatorul acceseaza buttonul “Profile” din navbar)
+(utilizatorul acceseaza buttonul “Profile” din navbar) --> (se afiseaza pagina “Profile” care contine un tabel cu date ale contului utilizatorului \n precum numele de utilizator , emailul si data in care contul a fost creat)
 @enduml
