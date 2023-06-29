@@ -13,5 +13,39 @@ class Profile{
 
 navbar -> myRuns
 
+class Utilizatorul{
+nume
+Get_inaltime()
+}
+
+class Butonul_Allow{
+
+}
+
+class Pop_up{
+}
+
+class Buton_start_new_session{
+}
+
+class acordul{
+}
+
+class locatia{
+}
+
+class distanta_alergata{
+}
+
+class mesaj_allow_acces{
+}
+
+class Buton_deny{
+}
+
+Pop_up .. Buton_deny
+Pop_up .. Butonul_Allow
+Pop_up.. mesaj_allow_acces
+
 
 @enduml

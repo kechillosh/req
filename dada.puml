@@ -12,18 +12,15 @@ Utilizator-->  (se afiseaza un Homepage care contine leaderboard , Navbar si For
 (Verificarea datelor Permite accesul) --> (Sunt deblocate features precum locul sau in leaderboard ,ultima sesiune de sport a utilizatorului "View last session" \n, si optiunea de a incepe o sesiune noua de alergat "start new session")
  (Verificarea a esuat si nu permite accesul) --> ( Pagina returneaza mesajul "username or password incorrect, please try again")
 
-Utilizator --> (Acceseaza butonul “View last run” )
-(Acceseaza butonul “View last run” ) --> (se va  afisa un pop-up cu statisticile despre ultima lui sesiune de alergat.)
-Utilizator --> (utilizatorul acceseaza butonul “start new session”)
-(utilizatorul acceseaza butonul “start new session”) --> (aplicatia cere accordul utilizatorului de a accesa locatia utilizatorului pentru a calcula distanta alergata\n printr-un pop-up cu messajul “Allow acces to location” si butoanele “Allow” si “Deny”.)
-Utilizator --> (alege butonul "Allow" din pop-up )
-(alege butonul "Allow" din pop-up ) --> (sesiunea de alergat incepe )
-(sesiunea de alergat incepe ) --> (se afiseaza o fereastra  pe pagina cu \n locatia actuala pe o harta, cronometru ,distanta parcursa si butonul “end session”.)
-Utilizator --> ( Acceseaza butonul “end session” )
-( Acceseaza butonul “end session” ) --> (se vor afisa statisticile finale despre sesiune si avansul pe care acesta la facut in rank.)
 
-Utilizator --> (utilizatorul alege butonul “Deny” )
-(utilizatorul alege butonul “Deny” ) --> (se va da refresh la pagina si nu va incepe sesiunea de alergat.)
+Utilizator --> (se va  afisa un pop-up cu statisticile despre ultima lui sesiune de alergat.) : Acceseaza butonul \n View last run”
+Utilizator --> (aplicatia cere accordul utilizatorului de a accesa locatia utilizatorului pentru a calcula distanta alergata\n printr-un pop-up cu messajul “Allow acces to location” si butoanele “Allow” si “Deny”.) : utilizatorul acceseaza \n butonul start new session
+Utilizator --> (sesiunea de alergat incepe ) : alege butonul "Allow"\n din pop-up
+(sesiunea de alergat incepe ) --> (se afiseaza o fereastra  pe pagina cu \n locatia actuala pe o harta, cronometru ,distanta parcursa si butonul "end session".)
+
+Utilizator --> (se vor afisa statisticile finale despre sesiune si avansul pe care acesta la facut in rank.) : Acceseaza butonul end session
+
+Utilizator --> (se va da refresh la pagina si nu va incepe sesiunea de alergat.) : utilizatorul alege butonul Deny
   usecase "Acceseaza buttonul "Home" din navbar si este intors pe Homepage" as UC1
   usecase "Acceseaza buttonul "My runs" din navbar" as UC2
 
