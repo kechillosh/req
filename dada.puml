@@ -21,15 +21,28 @@ Utilizator --> (sesiunea de alergat incepe ) : alege butonul "Allow"\n din pop-u
 Utilizator --> (se vor afisa statisticile finale despre sesiune si avansul pe care acesta la facut in rank.) : Acceseaza butonul end session
 
 Utilizator --> (se va da refresh la pagina si nu va incepe sesiunea de alergat.) : utilizatorul alege butonul Deny
-  usecase "Acceseaza buttonul "Home" din navbar si este intors pe Homepage" as UC1
-  usecase "Acceseaza buttonul "My runs" din navbar" as UC2
 
+Utilizator --> (Se afiseaza  homepage) : Acceseaza butonul home
 
+Utilizator-->(Se  afiseaza o pagina cu toate sesiunile utilizatorului de sport de pe contul logat \n care are optiunea de a filtra datele in legatura cu sesiunile de sport): Acceseaza buttonul My runs
 
-Utilizator -> UC2
-UC2 -->(Se  afiseaza o pagina cu toate sesiunile utilizatorului de sport de pe contul logat \n care are optiunea de a filtra datele in legatura cu sesiunile de sport)
+Utilizator --> (se afiseaza pagina “Profile” care contine un tabel cu date ale contului utilizatorului \n precum numele de utilizator , emailul si data in care contul a fost creat) :  acceseaza buttonul “Profile” din navbar
 
-Utilizator --> UC1
-Utilizator --> (utilizatorul acceseaza buttonul “Profile” din navbar)
-(utilizatorul acceseaza buttonul “Profile” din navbar) --> (se afiseaza pagina “Profile” care contine un tabel cu date ale contului utilizatorului \n precum numele de utilizator , emailul si data in care contul a fost creat)
+Utilizator --> (afiseaza o pagina cu butoanele reset password, change username ) :  acceseaza buttonul security
+
+Utilizator --> (se va afisa un formular ce contine campurile \n Old password, new password , repeat new password, si butonul submit):acceseaza butonul reset password
+
+Utilizator --> ( O verificare automata a campului old password va avea loc) :butonul submit este accesat
+
+( O verificare automata a campului old password va avea loc) --> (parola noua va fi setata) :datele coincid cu parola veche \n a utilizatorului din baza de date
+
+Utilizator --> (schimbarea parolei esueaza si returneaza mesajul “Password change failed, please try again”) : old password nu coincide cu parola veche din baza de date
+
+Utilizator --> (acestuia ii va aparea un formular ce contine campurile \n Old username, new username, repeat new username, si butonul submit) :  acceseaza butonul Change username
+
+Utilizator --> (O verificare automata a campului old username va avea loc) : butonul submit este accesat
+
+(O verificare automata a campului old username va avea loc) --> (usernameul nou va fi setat) : daca datele coincid cu usernameul vechi \n al utilizatorului din baza de date
+
+Utilizator --> (schimbarea acestuia esueaza si returneaza mesajul “Username change failed, please try again”) : old username nu coincide cu usernameul din baza de date
 @enduml
