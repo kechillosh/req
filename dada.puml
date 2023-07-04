@@ -38,7 +38,7 @@ Utilizator --> ( O verificare automata a campului old password va avea loc) :but
 
 Utilizator --> (schimbarea parolei esueaza si returneaza mesajul “Password change failed, please try again”) : old password nu coincide cu parola veche din baza de date
 
-Utilizator --> (acestuia ii va aparea un formular ce contine campurile \n Old username, new username, repeat new username, si butonul submit) :  acceseaza butonul Change username
+Utilizator --> (se va afisa un formular ce contine campurile \n Old username, new username, repeat new username, si butonul submit) :  acceseaza butonul Change username
 
 Utilizator --> (O verificare automata a campului old username va avea loc) : butonul submit este accesat
 
