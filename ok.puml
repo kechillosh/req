@@ -1,51 +1,142 @@
 @startuml
 'https://plantuml.com/class-diagram
-class Sectiune{
-}
-class navbar{
-}
-class button{
-}
-class myRuns{
-}
-class Profile{
+
+class Homepage{
 }
 
-navbar -> myRuns
+class Leaderboard{
+}
+
+class Utilizatori{
+}
+
+class Navbar{
+}
+
+class Formular_login{
+}
+
+class Formular_sign_up{
+}
+
+class Campul_username{
+}
+
+class Campul_password{
+}
 
 class Utilizatorul{
-nume
-Get_inaltime()
 }
 
-class Butonul_Allow{
-
+class Datele{
 }
+
+class sistem_automat{
+}
+
+class data_base {
+}
+
+class Verificarea{
+}
+
+class Accesul{
+}
+
+class Features{
+}
+
+class Rankul_utilizatorului{
+}
+
+class Ultima_Sesiune_de_sport{
+}
+
+class Buttonul_viewLastRun{
+}
+
+class Sesiune_noua{
+}
+
+class Buttonul_startNewSession{
+}
+
+class Mesaj_rosu{
+}
+
+class Pagina {
+}
+
+class Locatia_utilizatorului {
+}
+
+class Distanta_alergata {
+}
+
+class Pop_up_Locatie {
+}
+
+class Buttonul_Allow {
+}
+
+class Deny{
+}
+
+class Fereastra {
+}
+
+class Locatia_actuala {
+}
+
+class harta {
+}
+
+class Cronometru {
+}
+
+class Distanta_parcursa {
+}
+
+class Buttonul_end_session {
+}
+
+class Statisticile_finale {
+}
+
+class Avans_in_rank {
+}
+
+class Buttonul_Home {
+}
+
+class Buttonul_MyRuns {
+}
+
+class Buttonul_Profile {
+}
+
+
+
+
 
 class Pop_up{
 }
 
-class Buton_start_new_session{
+class Sesiune_de_alergat{
 }
 
-class acordul{
+class Buttonul_Profile{
 }
 
-class locatia{
+class Pagina_Profile {
 }
 
-class distanta_alergata{
+class Tabel_cu_date {
 }
 
-class mesaj_allow_acces{
+class Contul_Utilizatorului {
 }
 
-class Buton_deny{
-}
-
-Pop_up .. Buton_deny
-Pop_up .. Butonul_Allow
-Pop_up.. mesaj_allow_acces
 
 
 @enduml

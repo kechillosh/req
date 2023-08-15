@@ -18,7 +18,7 @@ Utilizator --> (aplicatia cere accordul utilizatorului de a accesa locatia utili
 Utilizator --> (sesiunea de alergat incepe ) : alege butonul "Allow"\n din pop-up
 (sesiunea de alergat incepe ) --> (se afiseaza o fereastra  pe pagina cu \n locatia actuala pe o harta, cronometru ,distanta parcursa si butonul "end session".)
 
-Utilizator --> (se vor afisa statisticile finale despre sesiune si avansul pe care acesta la facut in rank.) : Acceseaza butonul end session
+Utilizator --> (se vor afisa statisticile finale despre sesiune si avansul pe care acesta la facut in rank, iar leaderboardul se va actualiza automat) : Acceseaza butonul end session
 
 Utilizator --> (se va da refresh la pagina si nu va incepe sesiunea de alergat.) : utilizatorul alege butonul Deny
 
