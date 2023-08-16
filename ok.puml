@@ -25,6 +25,9 @@ class Campul_username{
 class Campul_password{
 }
 
+class Button_Login {
+}
+
 class Utilizatorul{
 }
 
@@ -136,6 +139,35 @@ class Tabel_cu_date {
 
 class Contul_Utilizatorului {
 }
+
+
+
+
+
+Homepage *.. Leaderboard
+Homepage *.. Navbar
+Homepage *.. Formular_login
+Homepage *.. Formular_sign_up
+
+
+Formular_login *.. Campul_username
+Formular_login *.. Campul_password
+Formular_login *.. Button_Login
+
+
+
+Utilizatorul *.. Datele
+
+Accesul *.. Features
+Accesul *.. Rankul_utilizatorului
+Accesul *.. Ultima_Sesiune_de_sport
+Ultima_Sesiune_de_sport *.. Buttonul_viewLastRun
+Accesul *.. Buttonul_viewLastRun
+Accesul *.. Buttonul_startNewSession
+
+Buttonul_viewLastRun *.. Pop_up
+
+Buttonul_startNewSession *.. Pop_up_Locatie
 
 
 
