@@ -61,6 +61,12 @@ class Buttonul_viewLastRun{
 class Sesiune_noua{
 }
 
+class Pop_up{
+}
+
+class Sesiune_de_alergat{
+}
+
 class Buttonul_startNewSession{
 }
 
@@ -118,18 +124,17 @@ class Buttonul_MyRuns {
 class Buttonul_Profile {
 }
 
-
-
-
-
-class Pop_up{
+class filtru {
 }
 
-class Sesiune_de_alergat{
+class Homepage {
 }
 
-class Buttonul_Profile{
-}
+
+
+
+
+
 
 class Pagina_Profile {
 }
@@ -137,8 +142,9 @@ class Pagina_Profile {
 class Tabel_cu_date {
 }
 
-class Contul_Utilizatorului {
+class Utilizator {
 }
+
 
 
 
