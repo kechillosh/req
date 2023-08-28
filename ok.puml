@@ -6,9 +6,9 @@ class Homepage{
 
 class Leaderboard{
 }
-
-class Utilizatori{
+Class Utilizatori {
 }
+
 
 class Navbar{
 }
@@ -20,6 +20,14 @@ class Formular_sign_up{
 }
 
 class Campul_username{
+nr_maxim_caractere
+dimensiune_x
+dimensiune_y
+username
+afiseaza()
+memoreaza_input()
+delete_username()
+limiteaza_nr_caractere()
 }
 
 class Campul_password{
@@ -28,26 +36,6 @@ class Campul_password{
 class Button_Login {
 }
 
-class Utilizatorul{
-}
-
-class Datele{
-}
-
-class sistem_automat{
-}
-
-class data_base {
-}
-
-class Verificarea{
-}
-
-class Accesul{
-}
-
-class Features{
-}
 
 class Rankul_utilizatorului{
 }
@@ -58,14 +46,13 @@ class Ultima_Sesiune_de_sport{
 class Buttonul_viewLastRun{
 }
 
-class Sesiune_noua{
-}
 
 class Pop_up{
 }
 
-class Sesiune_de_alergat{
+class DIV_Sesiune_de_alergat{
 }
+
 
 class Buttonul_startNewSession{
 }
@@ -73,16 +60,12 @@ class Buttonul_startNewSession{
 class Mesaj_rosu{
 }
 
-class Pagina {
-}
 
-class Locatia_utilizatorului {
-}
-
-class Distanta_alergata {
-}
 
 class Pop_up_Locatie {
+pozitie_x
+pozitie_y
+afiseaza()
 }
 
 class Buttonul_Allow {
@@ -91,14 +74,10 @@ class Buttonul_Allow {
 class Buttonul_Deny{
 }
 
-class Fereastra {
-}
 
 class Locatia_actuala {
 }
 
-class harta {
-}
 
 class Cronometru {
 }
@@ -124,6 +103,9 @@ class Buttonul_MyRuns {
 class Buttonul_Profile {
 }
 
+class Pagina_Sesiuni_Alergat {
+}
+
 class filtru {
 }
 
@@ -146,50 +128,60 @@ class Pagina_Profile {
 class Tabel_cu_date {
 }
 
-class Utilizator {
-}
 
 
 
 
 
 
-Homepage *-- Leaderboard
-Homepage *-- Navbar
-Navbar *-- Formular_login
-Navbar *-- Mesaj_register
-Mesaj_register *-- Formular_sign_up
+Homepage "1"*-- "1" Leaderboard
+Homepage "1"*-- "1"Navbar
+Navbar "1"*-- "1"Formular_login
+Navbar "1"*-- "1"Mesaj_register
+Mesaj_register "1"*-- "1"Formular_sign_up
+Leaderboard"1" o-- "0+"Utilizatori
 
 
-Formular_login *-- Campul_username
-Formular_login *-- Campul_password
-Formular_login *-- Button_Login
+Formular_login"1" *--"1" Campul_username
+Formular_login"1" *-- "1"Campul_password
+Formular_login "1"*-- "1"Button_Login
+Formular_login "1"*-- "1"Mesaj_rosu
 
 
 
-Utilizatorul *-- Datele
 
+Homepage "1"*-- "1"Rankul_utilizatorului
+Homepage "1"*-- "1"Ultima_Sesiune_de_sport
+Ultima_Sesiune_de_sport"1" *-- "1"Buttonul_viewLastRun
+Homepage"1" *--"1" Buttonul_viewLastRun
+Homepage"1" *-- "1"Buttonul_startNewSession
 
-Homepage *-- Rankul_utilizatorului
-Homepage *-- Ultima_Sesiune_de_sport
-Ultima_Sesiune_de_sport *-- Buttonul_viewLastRun
-Homepage *-- Buttonul_viewLastRun
-Homepage *-- Buttonul_startNewSession
+Buttonul_viewLastRun"1" *-- "1"Pop_up
 
-Buttonul_viewLastRun *-- Pop_up
+Buttonul_startNewSession "1"*-- "1"Pop_up_Locatie
 
-Buttonul_startNewSession *-- Pop_up_Locatie
+Pop_up_Locatie "1"*-- "1"Buttonul_Allow
+Pop_up_Locatie "1"*-- "1"Buttonul_Deny
 
-Pop_up_Locatie *-- Buttonul_Allow
-Pop_up_Locatie *-- Buttonul_Deny
+Buttonul_Allow "1"*-- "1"DIV_Sesiune_de_alergat
 
-Buttonul_Allow *-- Sesiune_de_alergat
+DIV_Sesiune_de_alergat "1"*-- "1"Harta
+Harta"1" *-- "1"Locatia_actuala
+DIV_Sesiune_de_alergat "1"*-- "1"Cronometru
+DIV_Sesiune_de_alergat "1"*-- "1"Distanta_parcursa
+DIV_Sesiune_de_alergat"1" *-- "1"Buttonul_end_session
+Buttonul_end_session "1"*-- "1"Statisticile_finale
+Buttonul_end_session"1" *--"1" Avans_in_rank
 
-Sesiune_de_alergat *-- Harta
-Harta *-- Locatia_actuala
-Sesiune_de_alergat *-- Cronometru
-Sesiune_de_alergat *-- Distanta_parcursa
-Sesiune_de_alergat *-- Buttonul_end_session
+Navbar"1" *--"1" Buttonul_Home
+Navbar "1"*-- "1"Buttonul_MyRuns
+Navbar"1" *-- "1"Buttonul_Profile
+Buttonul_MyRuns "1" o-- "1"Pagina_Sesiuni_Alergat
+Pagina_Sesiuni_Alergat"1" *--"1" filtru
+Buttonul_Home"1" *-- "1"Homepage
+Buttonul_Profile"1" o--"1" Pagina_Profile
+Pagina_Profile"1" *-- "1"Tabel_cu_date
+
 
 
 
