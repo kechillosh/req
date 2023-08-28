@@ -20,6 +20,14 @@ class Formular_sign_up{
 }
 
 class Campul_username{
+nr_maxim_caractere
+dimensiune_x
+dimensiune_y
+username
+afiseaza()
+memoreaza_input()
+delete_username()
+limiteaza_nr_caractere()
 }
 
 class Campul_password{
@@ -83,6 +91,9 @@ class Distanta_alergata {
 }
 
 class Pop_up_Locatie {
+pozitie_x
+pozitie_y
+afiseaza()
 }
 
 class Buttonul_Allow {
@@ -173,7 +184,7 @@ Accesul *.. Buttonul_startNewSession
 
 Buttonul_viewLastRun *.. Pop_up
 
-Buttonul_startNewSession *.. Pop_up_Locatie
+Buttonul_startNewSession .. Pop_up_Locatie
 
 
 
