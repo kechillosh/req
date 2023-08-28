@@ -88,7 +88,7 @@ class Pop_up_Locatie {
 class Buttonul_Allow {
 }
 
-class Deny{
+class Buttonul_Deny{
 }
 
 class Fereastra {
@@ -130,7 +130,11 @@ class filtru {
 class Homepage {
 }
 
+class Mesaj_register {
+}
 
+class Harta {
+}
 
 
 
@@ -150,30 +154,44 @@ class Utilizator {
 
 
 
-Homepage *.. Leaderboard
-Homepage *.. Navbar
-Homepage *.. Formular_login
-Homepage *.. Formular_sign_up
+Homepage *-- Leaderboard
+Homepage *-- Navbar
+Navbar *-- Formular_login
+Navbar *-- Mesaj_register
+Mesaj_register *-- Formular_sign_up
 
 
-Formular_login *.. Campul_username
-Formular_login *.. Campul_password
-Formular_login *.. Button_Login
+Formular_login *-- Campul_username
+Formular_login *-- Campul_password
+Formular_login *-- Button_Login
 
 
 
-Utilizatorul *.. Datele
+Utilizatorul *-- Datele
 
-Accesul *.. Features
-Accesul *.. Rankul_utilizatorului
-Accesul *.. Ultima_Sesiune_de_sport
-Ultima_Sesiune_de_sport *.. Buttonul_viewLastRun
-Accesul *.. Buttonul_viewLastRun
-Accesul *.. Buttonul_startNewSession
 
-Buttonul_viewLastRun *.. Pop_up
+Homepage *-- Rankul_utilizatorului
+Homepage *-- Ultima_Sesiune_de_sport
+Ultima_Sesiune_de_sport *-- Buttonul_viewLastRun
+Homepage *-- Buttonul_viewLastRun
+Homepage *-- Buttonul_startNewSession
 
-Buttonul_startNewSession *.. Pop_up_Locatie
+Buttonul_viewLastRun *-- Pop_up
+
+Buttonul_startNewSession *-- Pop_up_Locatie
+
+Pop_up_Locatie *-- Buttonul_Allow
+Pop_up_Locatie *-- Buttonul_Deny
+
+Buttonul_Allow *-- Sesiune_de_alergat
+
+Sesiune_de_alergat *-- Harta
+Harta *-- Locatia_actuala
+Sesiune_de_alergat *-- Cronometru
+Sesiune_de_alergat *-- Distanta_parcursa
+Sesiune_de_alergat *-- Buttonul_end_session
+
+
 
 
 

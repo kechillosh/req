@@ -3,7 +3,7 @@
 'actor Navbar'
 actor Utilizator
 
-Utilizator-->  (se afiseaza un Homepage care contine leaderboard , Navbar si Formular log in / sign up) :acceseaza link site
+Utilizator-->  (se afiseaza un Homepage care contine leaderboard , Navbar si Formular log in integrat in navbar. \n sub formularul de log in este un mesaj “register now”) :acceseaza link site
 
  Utilizator --> (introduce datele sale in campul de “username” si campul “password” )
  Utilizator  --> (Datele introduse sunt verificate automat intr-un database) :Click pe log in
@@ -11,8 +11,9 @@ Utilizator-->  (se afiseaza un Homepage care contine leaderboard , Navbar si For
   (Datele introduse sunt verificate automat intr-un database) --> (Verificarea a esuat si nu permite accesul)
 (Verificarea datelor Permite accesul) --> (Sunt deblocate features precum locul sau in leaderboard ,ultima sesiune de sport a utilizatorului "View last session" \n, si optiunea de a incepe o sesiune noua de alergat "start new session")
  (Verificarea a esuat si nu permite accesul) --> ( Pagina returneaza mesajul "username or password incorrect, please try again")
-
-
+ Utilizator --> (se va afisa formularul de inregistrare, care contine campurile "username" , "Password" si "repeat password") : acceseaza textul register now
+Utilizator --> (contul se va crea) : acceseaza buttonul register si introduce un username si \n parola in ambele campuri de password si acestea coincid
+Utilizator --> (contul nu se va crea si formularul v-a returna mesajul “registration failed”) : introduce parola diferit intr-un camp fata de altul
 Utilizator --> (se va  afisa un pop-up cu statisticile despre ultima lui sesiune de alergat.) : Acceseaza butonul \n View last run”
 Utilizator --> (aplicatia cere accordul utilizatorului de a accesa locatia utilizatorului pentru a calcula distanta alergata\n printr-un pop-up cu messajul “Allow acces to location” si butoanele “Allow” si “Deny”.) : utilizatorul acceseaza \n butonul start new session
 Utilizator --> (sesiunea de alergat incepe ) : alege butonul "Allow"\n din pop-up
