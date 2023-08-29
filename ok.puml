@@ -2,15 +2,25 @@
 'https://plantuml.com/class-diagram
 
 class Homepage{
+status open/closed
+Imagine fundal
+
 }
 
 class Leaderboard{
+Afiseaza Utilizator()
 }
-Class Utilizatori {
+class Utilizator {
 }
 
 
 class Navbar{
+inaltime
+latime
+culoare
+status_butoane activ/inactiv
+Ajuta_la_navigare()
+
 }
 
 class Formular_login{
@@ -139,7 +149,7 @@ Homepage "1"*-- "1"Navbar
 Navbar "1"*-- "1"Formular_login
 Navbar "1"*-- "1"Mesaj_register
 Mesaj_register "1"*-- "1"Formular_sign_up
-Leaderboard"1" o-- "0+"Utilizatori
+Leaderboard"1" o-- "0+"Utilizator
 
 
 Formular_login"1" *--"1" Campul_username
@@ -156,29 +166,29 @@ Ultima_Sesiune_de_sport"1" *-- "1"Buttonul_viewLastRun
 Homepage"1" *--"1" Buttonul_viewLastRun
 Homepage"1" *-- "1"Buttonul_startNewSession
 
-Buttonul_viewLastRun"1" *-- "1"Pop_up
+Buttonul_viewLastRun"1" o-- "1"Pop_up
 
-Buttonul_startNewSession "1"*-- "1"Pop_up_Locatie
+Buttonul_startNewSession "1" o-- "1"Pop_up_Locatie
 
 Pop_up_Locatie "1"*-- "1"Buttonul_Allow
 Pop_up_Locatie "1"*-- "1"Buttonul_Deny
 
-Buttonul_Allow "1"*-- "1"DIV_Sesiune_de_alergat
+Buttonul_Allow "1" o-- "1"DIV_Sesiune_de_alergat
 
 DIV_Sesiune_de_alergat "1"*-- "1"Harta
 Harta"1" *-- "1"Locatia_actuala
 DIV_Sesiune_de_alergat "1"*-- "1"Cronometru
 DIV_Sesiune_de_alergat "1"*-- "1"Distanta_parcursa
 DIV_Sesiune_de_alergat"1" *-- "1"Buttonul_end_session
-Buttonul_end_session "1"*-- "1"Statisticile_finale
-Buttonul_end_session"1" *--"1" Avans_in_rank
+Buttonul_end_session "1" o-- "1"Statisticile_finale
+Buttonul_end_session"1" o--"1" Avans_in_rank
 
 Navbar"1" *--"1" Buttonul_Home
 Navbar "1"*-- "1"Buttonul_MyRuns
 Navbar"1" *-- "1"Buttonul_Profile
 Buttonul_MyRuns "1" o-- "1"Pagina_Sesiuni_Alergat
 Pagina_Sesiuni_Alergat"1" *--"1" filtru
-Buttonul_Home"1" *-- "1"Homepage
+Buttonul_Home"1" o-- "1"Homepage
 Buttonul_Profile"1" o--"1" Pagina_Profile
 Pagina_Profile"1" *-- "1"Tabel_cu_date
 
