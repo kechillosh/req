@@ -24,9 +24,11 @@ Ajuta_la_navigare()
 }
 
 class Formular_login{
+memoreaza_informatiile()
 }
 
 class Formular_sign_up{
+Memoreaza_informatiile()
 }
 
 class Campul_username{
@@ -41,26 +43,40 @@ limiteaza_nr_caractere()
 }
 
 class Campul_password{
+Memoreaza_Input()
 }
 
+
 class Button_Login {
+Transmite_informatia()
 }
 
 
 class Rankul_utilizatorului{
+Distanta_alergata_totala
+Afiseaza_distanta_alergata_totala()
 }
 
 class Ultima_Sesiune_de_sport{
+informatii_sesiune_alergat
+Afiseaza_informatii_ultima_sesiune()
 }
 
 class Buttonul_viewLastRun{
+Latime
+Inaltime
+Culoare
+Status activ/inactiv
 }
 
 
-class Pop_up{
-}
+
 
 class DIV_Sesiune_de_alergat{
+dimensiune_x
+dimensiune_y
+Fundal_Harta
+Inregistreaza_informatia_sesiune()
 }
 
 
@@ -149,7 +165,7 @@ Homepage "1"*-- "1"Navbar
 Navbar "1"*-- "1"Formular_login
 Navbar "1"*-- "1"Mesaj_register
 Mesaj_register "1"*-- "1"Formular_sign_up
-Leaderboard"1" o-- "0+"Utilizator
+Leaderboard"1" o-- "many"Utilizator
 
 
 Formular_login"1" *--"1" Campul_username
@@ -166,7 +182,7 @@ Ultima_Sesiune_de_sport"1" *-- "1"Buttonul_viewLastRun
 Homepage"1" *--"1" Buttonul_viewLastRun
 Homepage"1" *-- "1"Buttonul_startNewSession
 
-Buttonul_viewLastRun"1" o-- "1"Pop_up
+Buttonul_viewLastRun"1" o-- "1"Pop_up_Locatie
 
 Buttonul_startNewSession "1" o-- "1"Pop_up_Locatie
 
@@ -191,6 +207,7 @@ Pagina_Sesiuni_Alergat"1" *--"1" filtru
 Buttonul_Home"1" o-- "1"Homepage
 Buttonul_Profile"1" o--"1" Pagina_Profile
 Pagina_Profile"1" *-- "1"Tabel_cu_date
+
 
 
 
