@@ -189,7 +189,7 @@ Buttonul_startNewSession "1" o-- "1"Pop_up_Locatie
 Pop_up_Locatie "1"*-- "1"Buttonul_Allow
 Pop_up_Locatie "1"*-- "1"Buttonul_Deny
 
-Buttonul_Allow "1" o-- "1"DIV_Sesiune_de_alergat
+Buttonul_Allow  o.. DIV_Sesiune_de_alergat
 
 DIV_Sesiune_de_alergat "1"*-- "1"Harta
 Harta"1" *-- "1"Locatia_actuala
@@ -202,11 +202,11 @@ Buttonul_end_session"1" o--"1" Avans_in_rank
 Navbar"1" *--"1" Buttonul_Home
 Navbar "1"*-- "1"Buttonul_MyRuns
 Navbar"1" *-- "1"Buttonul_Profile
-Buttonul_MyRuns "1" o-- "1"Pagina_Sesiuni_Alergat
+Buttonul_MyRuns  o.. Pagina_Sesiuni_Alergat
 Pagina_Sesiuni_Alergat"1" *--"1" filtru
-Buttonul_Home"1" o-- "1"Homepage
-Buttonul_Profile"1" o--"1" Pagina_Profile
-Pagina_Profile"1" *-- "1"Tabel_cu_date
+Buttonul_Home o.. Homepage
+Buttonul_Profile o.. Pagina_Profile
+Pagina_Profile *-- Tabel_cu_date
 
 
 
