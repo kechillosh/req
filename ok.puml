@@ -5,13 +5,24 @@ class Homepage{
 status open/closed
 Imagine fundal
 
+
 }
 
 class Leaderboard{
+date_sesiuni_alergat
+calculator
+
+Afiseaza performanta in ordine descrescatoare()
 Afiseaza Utilizator()
 }
+
+
 class Utilizator {
+Nume
+
+get_info_utilizator()
 }
+note left :Contine datele utilizatorului individual
 
 
 class Navbar{
@@ -24,15 +35,22 @@ Ajuta_la_navigare()
 }
 
 class Formular_login{
-memoreaza_informatiile()
+marime
+Accesibilitate
+Autentificare cu utilizator și parolă()
+afiseaza()
 }
 
 class Formular_sign_up{
-Memoreaza_informatiile()
+marime
+se afiseaza()
+Feedback și mesaje de eroare()
+Crearea contului de utilizator()
+
 }
 
 class Campul_username{
-nr_maxim_caractere
+nr_maxim_caractere_12
 dimensiune_x
 dimensiune_y
 username
@@ -43,22 +61,37 @@ limiteaza_nr_caractere()
 }
 
 class Campul_password{
-Memoreaza_Input()
+dimensiune_x
+dimensiune_y
+nr_maxim_caractere_12
+limiteaza_nr_caractere()
+Ascunde_caracterele_introduse()
 }
 
 
 class Button_Login {
-Transmite_informatia()
+dimensiune_x
+dimensiune_y
+culoare
+status Activ/inactiv/hover
+se_afiseaza()
+set(username,password)
+
 }
+note top:Transmite datele din username si parola catre database si se verifica
 
 
 class Rankul_utilizatorului{
-Distanta_alergata_totala
+nume_utilizator
+distanta_in_km
+get_info_utilizator()
 Afiseaza_distanta_alergata_totala()
 }
+note top:Preia datele utilizatorului din database
 
 class Ultima_Sesiune_de_sport{
-informatii_sesiune_alergat
+distanta_in_km
+get_info_utilizator()
 Afiseaza_informatii_ultima_sesiune()
 }
 
@@ -77,13 +110,24 @@ dimensiune_x
 dimensiune_y
 Fundal_Harta
 Inregistreaza_informatia_sesiune()
+set_info_alergat()
 }
+note top : transmite informatiile despre sesiune catre baza de date
 
 
 class Buttonul_startNewSession{
+dimensiune_x
+dimensiune_y
+status activ/inactiv/hover
+se afiseaza()
 }
 
 class Mesaj_rosu{
+culoare_rosie
+dimensiune_x
+dimensiune_y
+Caractere
+Informeaza_utilizatorul()
 }
 
 
@@ -91,57 +135,135 @@ class Mesaj_rosu{
 class Pop_up_Locatie {
 pozitie_x
 pozitie_y
+
 afiseaza()
 }
 
 class Buttonul_Allow {
+dimensiune_x
+dimensiune_y
+se_afiseaza()
+Permite_folosirea_locatiei()
+Porneste_sesiune_alergat()
 }
 
 class Buttonul_Deny{
+dimensiune_x
+dimensiune_y
+se_afiseaza()
+Inchide_fereastra_pop_up()
 }
 
 
 class Locatia_actuala {
+marker
+afiseaza_locatia_utilizatorului()
+get_date_harta()
 }
-
+note top: Comunica cu harta pentru a pune un marker \n pe locatia precisa a utilizatorului
 
 class Cronometru {
+Data
+Masoara_timpul()
+Inregistreaza_timpul()
+Memoreaza_timpul()
+
+}
+
+class Baza_de_date{
+memoreaza
+memorie
+memoreaza_informatiile_utilizator()
 }
 
 class Distanta_parcursa {
+calculator
+Number
+Get()
+Calculeaza_distanta_parcursa()
 }
+note top: Comunica cu Harta si Locatia_actuala pentru \n a calcula distanta_in_km
 
 class Buttonul_end_session {
+Control
+dimensiune_x
+dimensiune_y
+se_afiseaza()
+Incheie_sesiune_alergat()
 }
 
 class Statisticile_finale {
+Distanta_parcursa
+Data_ora_minut_secunda
+se afiseaza()
+afiseaza_distanta_parcursa()
+afiseaza_timpul_alergat()
 }
+note top:
+
 
 class Avans_in_rank {
+Calculator
+memorie
+Adauga_distanta_alergata_cu_total_alergat()
+Set_Rank_utilizator()
 }
 
 class Buttonul_Home {
+dimensiune_x
+dimensiune_y
+Status Activ/Inactiv/Hover
+se_afiseaza()
+Navigheaza_utilizatorul_pe_homepage()
 }
 
 class Buttonul_MyRuns {
+dimensiune_x
+dimensiune_y
+Status Activ/Inactiv/Hover
+se_afiseaza()
+Navigheaza_utilizatorul_pe_pagina_sesiuni_alergat()
+
 }
 
 class Buttonul_Profile {
+dimensiune_x
+dimensiune_y
+Status Activ/Inactiv/Hover
+se_afiseaza()
+Navigheaza_utilizatorul_pe_Pagina_profile()
 }
 
 class Pagina_Sesiuni_Alergat {
+Personalizare
+Arhivă a sesiunilor
+Interfata accesibila
+Analiză a progresului()
 }
 
 class filtru {
+data
+calculator
+memorie
+Navigheaza prin sesiuni()
 }
 
-class Homepage {
-}
 
 class Mesaj_register {
+Status On/Off
+Caractere
+On_click
+Navigheaza_utilizatorul_catre_formular_sign_up()
 }
 
 class Harta {
+Utilizator
+grafic a spatiului geografic
+Georeferentiere și coordonate
+Actualizare și corectare periodica()
+Navigare interactivă()
+Vizualizare 3D()
+
 }
 
 
@@ -149,11 +271,21 @@ class Harta {
 
 
 class Pagina_Profile {
+Informații Utilizator
+Personalizare
+Afiseaza_datele_utilizator()
+
 }
 
 class Tabel_cu_date {
+Structura clara și organizata
+Interactivitate și modificare usoara
+Date Utilizator
+Sortare și filtrare()
+Editare și actualizare a datelor()
+Get_info_utilizator()
 }
-
+note left: comunica cu baza de date pentru a prelua datele utilizatorului
 
 
 
@@ -166,8 +298,11 @@ Navbar "1"*-- "1"Formular_login
 Navbar "1"*-- "1"Mesaj_register
 Mesaj_register "1"*-- "1"Formular_sign_up
 Leaderboard"1" o-- "many"Utilizator
+Baza_de_date"1" o-- "1" Leaderboard
+Baza_de_date"1" *-- "many" Utilizator
 
-
+Baza_de_date "1" *-- "1" Campul_username
+Baza_de_date "1" *-- "1" Campul_password
 Formular_login"1" *--"1" Campul_username
 Formular_login"1" *-- "1"Campul_password
 Formular_login "1"*-- "1"Button_Login
@@ -178,7 +313,7 @@ Formular_login "1"*-- "1"Mesaj_rosu
 
 Homepage "1"*-- "1"Rankul_utilizatorului
 Homepage "1"*-- "1"Ultima_Sesiune_de_sport
-Ultima_Sesiune_de_sport"1" *-- "1"Buttonul_viewLastRun
+Buttonul_viewLastRun"1" *-- "1"Ultima_Sesiune_de_sport
 Homepage"1" *--"1" Buttonul_viewLastRun
 Homepage"1" *-- "1"Buttonul_startNewSession
 
@@ -207,8 +342,8 @@ Pagina_Sesiuni_Alergat"1" *--"1" filtru
 Buttonul_Home o.. Homepage
 Buttonul_Profile o.. Pagina_Profile
 Pagina_Profile *-- Tabel_cu_date
-
-
+Distanta_parcursa -- Statisticile_finale
+Cronometru -- Statisticile_finale
 
 
 
